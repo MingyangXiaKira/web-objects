@@ -126,5 +126,26 @@
       <div class="particle particle710"></div>
       <div class="particle particle711"></div>
     </div>
+    <script>
+      var animatedElements = document.querySelectorAll(
+        ".background0, .background1, .background2, .background3, .background4, .background5, .background6, .background7, .text0, .text1, .text2, .text3, .text4, .text5, .text6, .text7, .frame0, .frame1, .frame2, .frame3, .frame4, .frame5, .frame6, .frame7, .particle00, .particle01, .particle02, .particle03, .particle04, .particle05, .particle06, .particle07, .particle08, .particle09, .particle010, .particle011, .particle10, .particle11, .particle12, .particle13, .particle14, .particle15, .particle16, .particle17, .particle18, .particle19, .particle110, .particle111, .particle20, .particle21, .particle22, .particle23, .particle24, .particle25, .particle26, .particle27, .particle28, .particle29, .particle210, .particle211, .particle30, .particle31, .particle32, .particle33, .particle34, .particle35, .particle36, .particle37, .particle38, .particle39, .particle310, .particle311, .particle40, .particle41, .particle42, .particle43, .particle44, .particle45, .particle46, .particle47, .particle48, .particle49, .particle410, .particle411, .particle50, .particle51, .particle52, .particle53, .particle54, .particle55, .particle56, .particle57, .particle58, .particle59, .particle510, .particle511, .particle60, .particle61, .particle62, .particle63, .particle64, .particle65, .particle66, .particle67, .particle68, .particle69, .particle610, .particle611, .particle70, .particle71, .particle72, .particle73, .particle74, .particle75, .particle76, .particle77, .particle78, .particle79, .particle710, .particle711"
+      ); // 根据需要添加更多类
+      var totalAnimations = animatedElements.length;
+      var completedAnimations = 0;
+
+      // 动画结束时的回调函数
+      function onAnimationEnd() {
+        completedAnimations++;
+        if (completedAnimations === 1.1 * totalAnimations) {
+          // 所有动画完成后跳转
+          window.location.href = "https://example.com"; // 替换为您的目标 URL
+        }
+      }
+
+      // 为每个元素添加动画结束事件监听器
+      animatedElements.forEach(function (element) {
+        element.addEventListener("animationend", onAnimationEnd);
+      });
+    </script>
   </body>
 </html>
